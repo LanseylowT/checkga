@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25897056775",
+    "project_id": "checkga-1f192",
+    "storage_bucket": "checkga-1f192.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25897056775:android:7e72230397468955cc88a2",
+        "android_client_info": {
+          "package_name": "com.checkga.app.checkga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAql8bR2g6SV-JN-lZSFwzwjRR7sKaO8gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
