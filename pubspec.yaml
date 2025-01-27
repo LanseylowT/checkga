@@ -50,6 +50,10 @@ dependencies:
   page_transition: ^2.2.1
   provider: ^6.1.2
   internet_connection_checker_plus: ^1.0.1
+  ffigen: ^16.1.0
+
+  c_plugin:
+    path: plugins/c_plugin
 
 dev_dependencies:
   flutter_test:

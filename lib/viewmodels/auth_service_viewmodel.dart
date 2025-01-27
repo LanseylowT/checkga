@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthServiceViewmodel extends ChangeNotifier {
   final AuthServiceRepository _authRepository;
-  UserRole _userRole = UserRole.guest;
+  final UserRole _userRole = UserRole.guest;
   final String _userCacheKey = "user_role";
   final String _userCacheUIDKey = "cached_uid";
 
