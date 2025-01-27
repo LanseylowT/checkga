@@ -4,8 +4,16 @@ import 'package:checkga/viewmodels/auth_service_viewmodel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:c_plugin/c_plugin.dart';
 
-class AuthCheckScreen extends StatelessWidget {
+class AuthCheckScreen extends StatefulWidget {
+  const AuthCheckScreen({super.key});
+
+  @override
+  _AuthCheckScreenState createState() => _AuthCheckScreenState();
+}
+
+class _AuthCheckScreenState extends State<AuthCheckScreen> {
   @override
   Widget build(BuildContext context) {
     final authViewModel =
@@ -28,7 +36,7 @@ class AuthCheckScreen extends StatelessWidget {
                 );
               } else {
                 // TODO: Replace with a role-based navigation
-                UserRole? userRole = snapshot.data as UserRole?;
+                UserRole? userRole = snapshot.data;
                 return ScannerPage();
               }
             },
@@ -42,6 +50,8 @@ class AuthCheckScreen extends StatelessWidget {
 }
 
 class ScannerPage extends StatelessWidget {
+  const ScannerPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,12 +61,37 @@ class ScannerPage extends StatelessWidget {
   }
 }
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  int total = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
-      body: Center(child: Text("Please log in")),
+      body: Center(
+          child: Row(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                total = sum(5, 3);
+              });
+            },
+            child: const Text("Sum"),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+          Text("Sum Result: $total"),
+        ],
+      )),
     );
   }
 }
